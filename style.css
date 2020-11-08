@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+}
+button:hover {
+  color: #4eb5f1;
+  background-color: #000000;
+}
