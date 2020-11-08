@@ -12,6 +12,10 @@ class Animal {
     aDiv.style.left = pY + "px";
     atext = document.createElement("p");
     aImage = document.createElement("img");
+    const delete_element = document.querySelector(".delete_animal");
+    closeSpan.addEventListener("click", (e) => {
+      e.target.parentElement.remove();
+    });
   }
 }
 class Penguin extends Animal {
@@ -154,9 +158,4 @@ on_submit.addEventListener("click", (e) => {
     }
     pop_up.style.visibility = "hidden";
   }
-});
-document.querySelectorAll(".delete_animal").forEach((e) => {
-  e.addEventListener("click", () => {
-    e.parentElement.remove();
-  });
 });
