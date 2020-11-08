@@ -1,7 +1,12 @@
-let aDiv, atext, aImage;
+let aDiv, atext, aImage, closeSpan;
 class Animal {
   constructor(pX, pY) {
     aDiv = document.createElement("div");
+    closeSpan = document.createElement("span");
+    closeSpan.innerHTML = "&#10005;";
+    closeSpan.style.position = "absolute";
+    closeSpan.style.right = "0";
+    closeSpan.className = "delete_animal";
     aDiv.style.position = "fixed";
     aDiv.style.top = pX + "px";
     aDiv.style.left = pY + "px";
@@ -16,6 +21,7 @@ class Penguin extends Animal {
       "The Penguin swimming speed is: " + pSwimmingSpeed + " kmh";
     aImage.src = "./images/img03.jpg";
     aDiv.className = "penguin";
+    aDiv.appendChild(closeSpan);
     aDiv.appendChild(aImage);
     aDiv.appendChild(atext);
     document.body.appendChild(aDiv);
@@ -27,6 +33,7 @@ class Elephant extends Animal {
     atext.innerHTML = "The Elephant Weight is: " + eWeight + " kg";
     aImage.src = "./images/img01.jpg";
     aDiv.className = "elephant";
+    aDiv.appendChild(closeSpan);
     aDiv.appendChild(aImage);
     aDiv.appendChild(atext);
     document.body.appendChild(aDiv);
@@ -39,6 +46,7 @@ class Rabbit extends Animal {
     atext.innerHTML = "The Rabbit speed is: " + rSpeed + " kmh";
     aImage.src = "./images/img02.jpg";
     aDiv.className = "rabbit";
+    aDiv.appendChild(closeSpan);
     aDiv.appendChild(aImage);
     aDiv.appendChild(atext);
     document.body.appendChild(aDiv);
@@ -146,4 +154,9 @@ on_submit.addEventListener("click", (e) => {
     }
     pop_up.style.visibility = "hidden";
   }
+});
+document.querySelectorAll(".delete_animal").forEach((e) => {
+  e.addEventListener("click", () => {
+    e.parentElement.remove();
+  });
 });
