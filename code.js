@@ -12,7 +12,6 @@ class Animal {
     aDiv.style.left = pY + "px";
     atext = document.createElement("p");
     aImage = document.createElement("img");
-    const delete_element = document.querySelector(".delete_animal");
     closeSpan.addEventListener("click", (e) => {
       e.target.parentElement.remove();
     });
@@ -124,7 +123,8 @@ const y_position = document.querySelector(".y_position");
 add_animal_btn.addEventListener("click", () => {
   pop_up.style.visibility = "visible";
 });
-cancel.addEventListener("click", () => {
+cancel.addEventListener("click", (e) => {
+  e.preventDefault();
   pop_up.style.visibility = "hidden";
 });
 type_of_animal.addEventListener("click", () => {
