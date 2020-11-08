@@ -10,7 +10,24 @@
     <header class="header">
       <button class="show_penguin_btn">Show penguin</button>
       <button class="hide_penguin_btn">Hide penguin</button>
+      <button class="add_animal_btn">Add Animal</button>
     </header>
+    <form class="pop_up">
+      <h1>Add new Animal to the webPage</h1>
+      <p>Type of animal:</p>
+      <select class="type_of_animal">
+        <option value="elephant">elephant</option>
+        <option value="penguin">penguin</option>
+        <option value="rabbit">rabbit</option>
+      </select>
+      <span class="property_type">What is the wight of the elephant?</span>
+      <input type="text" class="property_input" />
+
+      <input type="text" class="x_position" placeholder="X position" />
+      <input type="text" class="y_position" placeholder="Y position" />
+      <button class="cancel">Cancel</button>
+      <button class="on_submit">Submit</button>
+    </form>
   </body>
   <script src="code.js"></script>
 </html>
