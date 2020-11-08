@@ -37,6 +37,8 @@ class Animal {
 
 new Animal(10, 10, "elephant", 660);
 new Animal(220, 120, "penguin", 660);
+new Animal(320, 420, "penguin", 660);
+new Animal(220, 120, "penguin", 660);
 new Animal(440, 140, "rabbit", 660);
 //Selecotrs
 const divs = document.querySelectorAll("div");
